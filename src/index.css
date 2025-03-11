@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hamburguer menu*/
+
+.hamburguer {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburguer-top,
+.hamburguer-middle,
+.hamburguer-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #007078;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburguer-middle{
+    transform: translateY(7px);
+}
+
+.hamburguer-bottom{
+    transform: translateY(14px);
+}
+
+.open{
+    transform: rotate(90deg);
+}
+
+.open .hamburguer-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburguer-middle{
+    display: none;
+}
+
+.open .hamburguer-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #20888F, #DFF3F5); /* Degradado */
+    background-clip: text;  /* Propiedad estándar */
+    -webkit-background-clip: text;  /* Compatibilidad con navegadores basados en WebKit (Chrome, Safari) */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para WebKit */
+  }
+
+  
+/* Estilos para los bullets */
+.swiper-pagination-bullet {
+    background-color: #888E99; /* Color de los puntos */
+    opacity: 1; /* Asegúrate que todos los puntos sean visibles */
+    transition: transform 0.3s; /* Suaviza el movimiento del punto activo */
+    width: 10px; /* Ancho del bullet */
+    height: 10px; /* Alto del bullet */
+    border-radius: 50%; /* Para que sean circulares */
+}
+
+
+.swiper-pagination-bullet-active {
+    background-color: #007078; 
+    transform: scale(1.2); 
+}
+
+.animate {
+    transition: opacity 2s ease, transform 2s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.animate {
+    opacity: 0;
+    transform: translateY(90px); 
+}
+
+.testimonial-carousel .swiper-slide-prev, 
+.testimonial-carousel .swiper-slide-next {
+    opacity: 0.5;  /* Transparencia del 50% para las diapositivas adyacentes */
+    transform: scale(0.85); /* Reducir un poco el tamaño de las diapositivas adyacentes */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .testimonial-carousel .swiper-slide {
+    opacity: 1s;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  
+  .grid-personalizada {
+    display: grid;
+    grid-template-rows: 75px auto 100px; /* Altura personalizada para cada fila */
+  }
+
+  .grid-ajustable {
+    display: grid;
+    grid-template-rows: auto; /* Ajusta la altura de la fila al contenido */
+  }
+
+  .grid-asesoria {
+    display: grid;
+    grid-template-rows: 800px 800px 800px 250px; /* Altura personalizada para cada fila */
+  }
